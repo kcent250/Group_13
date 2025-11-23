@@ -54,3 +54,11 @@ h1{margin:0 0 18px 0;font-size:20px}
   .container{padding:8px}
   .card{padding:20px}
 }
+
+/* JS-driven feedback */
+.error{color:#b91c1c;font-size:13px;margin-top:6px;min-height:18px}
+.form-message{font-size:14px;margin-top:10px;min-height:20px}
+.form-message.success{color:#065f46}
+.form-message.error{color:#b91c1c}
+
+.toggle-pw[aria-pressed="true"]{background:#f3f4f6}
