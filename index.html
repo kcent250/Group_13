@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login — Group 13</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card" aria-labelledby="signin-heading">
+      <div class="brand">G13</div>
+      <h1 id="signin-heading">Sign in to your account</h1>
+      <form class="login-form" action="#" method="post" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="username">
+
+        <label for="password">Password</label>
+        <div class="pw-row">
+          <input id="password" name="password" type="password" placeholder="Enter your password" required autocomplete="current-password">
+          <button type="button" class="toggle-pw" aria-pressed="false" aria-label="Show password">Show</button>
+        </div>
+
+        <div class="row between center">
+          <label class="checkbox">
+            <input type="checkbox" name="remember"> Remember me
+          </label>
+          <a class="small-link" href="#">Forgot?</a>
+        </div>
+
+        <button class="primary" type="submit">Sign in</button>
+      </form>
+
+      <div class="divider">or continue with</div>
+      <div class="socials">
+        <button class="social">Google</button>
+        <button class="social">GitHub</button>
+      </div>
+
+      <p class="muted">Don't have an account? <a href="#">Create one</a></p>
+    </section>
+  </main>
+
+  <script>
+    // Small script to toggle password visibility (optional)
+    const toggle = document.querySelector('.toggle-pw');
+    if (toggle) {
+      const pw = document.getElementById('password');
+      toggle.addEventListener('click', () => {
+        const isShown = pw.type === 'text';
+        pw.type = isShown ? 'password' : 'text';
+        toggle.textContent = isShown ? 'Show' : 'Hide';
+        toggle.setAttribute('aria-pressed', String(!isShown));
+      });
+    }
+  </script>
+</body>
+</html>

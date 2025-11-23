@@ -1,0 +1,56 @@
+/* styles.css — Login form for Group_13 */
+:root{
+  --bg:#f3f7fb;
+  --card:#ffffff;
+  --accent:#4f46e5;
+  --muted:#6b7280;
+  --radius:12px;
+  --shadow: 0 8px 20px rgba(15,23,42,0.06);
+}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:linear-gradient(180deg,var(--bg),#eaf2ff 60%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+.container{width:100%;max-width:420px;padding:16px;}
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:28px 26px;
+  text-align:left;
+}
+.brand{
+  width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);
+  color:white;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:14px;}
+h1{margin:0 0 18px 0;font-size:20px}
+.login-form{display:grid;gap:12px}
+.login-form label{font-size:13px;color:var(--muted);}
+.login-form input[type="email"],
+.login-form input[type="password"]{
+  width:100%;padding:12px;border:1px solid #e6e9ef;border-radius:8px;font-size:15px;box-sizing:border-box;
+}
+.pw-row{display:flex;gap:8px}
+.pw-row .toggle-pw{background:transparent;border:1px solid #e6e9ef;padding:8px 10px;border-radius:8px;cursor:pointer}
+.row{display:flex}
+.row.between{justify-content:space-between}
+.row.center{align-items:center}
+.checkbox{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+.small-link{font-size:13px;color:var(--accent);text-decoration:none}
+.primary{background:var(--accent);color:white;padding:12px;border-radius:10px;border:0;font-weight:600;cursor:pointer;margin-top:8px}
+.primary:hover{filter:brightness(.95)}
+.divider{font-size:13px;color:var(--muted);text-align:center;margin:16px 0}
+.socials{display:flex;gap:10px}
+.social{flex:1;padding:10px;border-radius:8px;border:1px solid #e6e9ef;background:white;cursor:pointer}
+.muted{font-size:13px;color:var(--muted);margin-top:12px}
+
+/* Responsive tweaks */
+@media (max-width:420px){
+  .container{padding:8px}
+  .card{padding:20px}
+}
