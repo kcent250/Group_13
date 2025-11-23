@@ -14,12 +14,14 @@
       <form class="login-form" action="#" method="post" novalidate>
         <label for="email">Email</label>
         <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="username">
+        <div class="error" id="email-error" aria-live="polite"></div>
 
         <label for="password">Password</label>
         <div class="pw-row">
           <input id="password" name="password" type="password" placeholder="Enter your password" required autocomplete="current-password">
           <button type="button" class="toggle-pw" aria-pressed="false" aria-label="Show password">Show</button>
         </div>
+        <div class="error" id="password-error" aria-live="polite"></div>
 
         <div class="row between center">
           <label class="checkbox">
@@ -29,6 +31,7 @@
         </div>
 
         <button class="primary" type="submit">Sign in</button>
+        <div id="form-message" role="status" aria-live="polite" class="form-message"></div>
       </form>
 
       <div class="divider">or continue with</div>
@@ -41,18 +44,6 @@
     </section>
   </main>
 
-  <script>
-    // Small script to toggle password visibility (optional)
-    const toggle = document.querySelector('.toggle-pw');
-    if (toggle) {
-      const pw = document.getElementById('password');
-      toggle.addEventListener('click', () => {
-        const isShown = pw.type === 'text';
-        pw.type = isShown ? 'password' : 'text';
-        toggle.textContent = isShown ? 'Show' : 'Hide';
-        toggle.setAttribute('aria-pressed', String(!isShown));
-      });
-    }
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
